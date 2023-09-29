@@ -5,15 +5,14 @@ import {AccountsService} from "../accounts.service";
 @Component({
   selector: 'app-new-account',
   templateUrl: './new-account.component.html',
-  styleUrls: ['./new-account.component.css'],
-  providers: [LoggingService]
+  styleUrls: ['./new-account.component.css']
 })
 export class NewAccountComponent {
   constructor(private loggingService: LoggingService,
-              private acountsService: AccountsService) {
+              private accountsService: AccountsService) {
   }
   onCreateAccount(accountName: string, accountStatus: string) {
-    this.acountsService.addAccount(accountName, accountStatus);
-    this.loggingService.logStatusChange(accountStatus);
+    this.accountsService.addAccount(accountName, accountStatus);
+    // this.loggingService.logStatusChange(accountStatus);
   }
 }
