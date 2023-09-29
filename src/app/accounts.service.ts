@@ -1,3 +1,6 @@
+import {Injectable} from "@angular/core";
+
+@Injectable()
 export class AccountsService {
   accounts = [
     {
@@ -13,7 +16,6 @@ export class AccountsService {
       status: 'unknown'
     }
   ];
-
   addAccount(name: string, status: string) {
     this.accounts.push({name: name, status: status});
   }
